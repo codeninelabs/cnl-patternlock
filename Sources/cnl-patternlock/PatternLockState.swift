@@ -11,11 +11,11 @@ private let INVALID_PATTERN_ERROR_MSG = "invalid pattern - dots must be adjacent
 
 @MainActor
 public class PatternLockState: ObservableObject {
-    @Published var dots: [[DotState]]
-    @Published var selectedDots: [Point] = []
-    @Published var currentPosition: CGPoint?
-    @Published var isShowingError: Bool = false
-    @Published var validationError: String?
+    @Published private var dots: [[DotState]]
+    @Published private var selectedDots: [Point] = []
+    @Published private var currentPosition: CGPoint?
+    @Published public var isShowingError: Bool = false
+    @Published public var validationError: String?
     private let gridSize: Int
     
     public init(gridSize: Int = 3, initialPattern: [Point]? = nil) {
