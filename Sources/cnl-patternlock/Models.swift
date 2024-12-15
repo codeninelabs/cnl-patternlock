@@ -7,19 +7,19 @@
 import SwiftUI
 
 public struct Point: Codable, Hashable, Sendable {
-    let x: Int
-    let y: Int
+    public let x: Int
+    public let y: Int
 }
 
 public struct DotState {
-    let position: Point
-    var isSelected: Bool = false
-    var frame: CGRect = .zero
+    public let position: Point
+    public var isSelected: Bool = false
+    public var frame: CGRect = .zero
 }
 
 public struct DotFramePreference: Equatable, Sendable {
-    let point: Point
-    let frame: CGRect
+    public let point: Point
+    public let frame: CGRect
 }
 
 public struct DotFramePreferenceKey: PreferenceKey {
